@@ -1,0 +1,14 @@
+[project]
+name = "fed"
+version = "0.1.0"
+description = "Simple cross-country GDP analysis"
+authors = [
+  { name = "Luqmaan Sahar", email = "ls2001@cam.ac.uk.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
