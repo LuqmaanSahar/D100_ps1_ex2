@@ -1,4 +1,4 @@
-# D100-PS1-EX2
+# D100-ps1-ex2 (Building a Repo Structure)
 ### MPhil in Economics and Data Science
 
 Problem set 1, exercise 2 for D100 (Fundamentals of Data Science)
