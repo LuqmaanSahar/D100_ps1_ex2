@@ -34,3 +34,6 @@ def data_load(units = 1e12, countries=countries, indicator=indicator,
     data=data/units
     
     return data
+
+# could also use pd.melt() instead of pd.pivot() if we wanted year as a variable, not as an index.
+# pd.melt(var_name='year', id_vars='country', value_name='NY.GDP.MKTP.CD')
