@@ -1,16 +1,16 @@
-name: fed-env  # name of the environment
-
+name: fed-env
 channels:
-  - defaults
+  - default
   - conda-forge
-  
 dependencies:
-  - python=3.12
+  - pandas-datareader
+  - ipywidgets
   - pandas
-  - numpy
-  - matplotlib
-  - jupyter
-  - seaborn
+  - python=3.12
   - pip
-  - pip:
-    - requests
+  - notebook
+  - seaborn
+  - matplotlib
+  - ipykernel
+  - numpy
+  - jupyter
