@@ -1,0 +1,27 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+
+# pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace   # Fix trailing spaces
+      - id: end-of-file-fixer   # Ensure files end with a newline
+      - id: check-yaml    # Attempts to load all yaml files to verify syntax
+      - id: check-added-large-files   # Prevent giant files from being committed
+
+# flake8
+# flake8 is a python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.0
+    hooks:
+      - id: flake8
+
+# mypy
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.1
+    hooks:
+      - id: mypy    # include type hints
+        additional_dependencies: [types-seaborn, polars, pandas-stubs, matplotlib]
+        args: ["--ignore-missing-imports", "--strict"]
