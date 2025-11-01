@@ -9,7 +9,7 @@ start_year = 2000
 end_year = 2022
 
 
-def data_load(units = 1e12, countries=countries, indicator=indicator, 
+def data_load(units = 1e12, countries=countries, indicator=indicator,
               start=start_year, end=end_year):
     """
     loads GDP data from World Bank
@@ -32,7 +32,7 @@ def data_load(units = 1e12, countries=countries, indicator=indicator,
                 end=end
             ).reset_index().pivot(index='year', columns='country', values='NY.GDP.MKTP.CD')
     data=data/units
-    
+
     return data
 
 # could also use pd.melt() instead of pd.pivot() if we wanted year as a variable, not as an index.
